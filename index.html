@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="md:mx-auto p-6" >
+    <div class="flex flex-row justify-between    mt-16 md:flex flex-row justify-between z-30">
+      <img src="./images/logo-bookmark.svg">
+
+
+      <div class="hidden md:flex flex-row items-center justify-between  md:w-1/2 md:space-x-10 md:space-y-0">
+        <!-- if we are not mentioning sm or md or lg that means that styling is default styling -->
+        <a href="#" class="hover:text-softRed">Features</a>
+        <a href="#" class="hover:text-softRed" >Download</a>
+        <a href="#" class="hover:text-softRed">FAQ</a>
+        <a href="#" class="text-white bg-softRed px-3 py-2 shadow-2xl	hover:text-softRed hover:text-white">Login</a>
+
+      </div>
+      <button id="menu_btn" class=" z-30 md:hidden hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span></button>
+    </div>
+    <div id="menu" class=" fixed hidden flex-col inset-0 z-20 self-end tracking-widest	text-center text-white  py-4 pb-4 w-full h-full px-6 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue">
+      <div class="w-full py-3 text-center">
+        <a href="#feature">features</a>
+      </div>
+      <div class="w-full py-3 text-center">
+        <a href="#downloads">download</a>
+      </div>
+      <div class="w-full py-3 text-center">
+        <a href="#faq">faq</a>
+      </div class="w-full py-3 text-center">
+      <div>
+        <a href="#">login</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- --------------------------------- -->
+  <section id="hero">
+    <!-- container form image and  content  -->
+    <div class="container flex flex-col-reverse mx-auto p-6 lg:flex-row lg:mb-0   lg:items-center">
+        <!-- content left side  -->
+        <div class="flex flex-col space-y-10  lg:w-1/2 "> 
+          <h1 class="text-3xl font-semibold text-center lg:text-6xl lg:text-left">A simple Bookmark manager</h1>
+          <p class="max-w-md text-lg text-center mx-auto text-grayishBlue lg:text-xl lg:text-left lg:mt-0 lg:mx-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, vitae.</p>
+          <div>
+            <a href="" class="p-4 text-sm font-semibold bg-softBlue text-white rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue">Get it in Chrome</a>
+            <a href="" class="p-4 text-sm font-semibold bg-white text-grayishBlue rounded shadow-md border-2 border-white md:text-base hover:bg-softBlue hover:text-white hover:border-softBlue">Get it in Chrome</a>
+
+          </div>
+        </div>
+      <!-- image right side -->
+        <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2 ">
+          <div class="bg-hero"></div>
+          <div>
+            <img src="./images/illustration-hero.svg" alt="" class="relative z-10 lg:top-24 xl:top-0 overflow-x-visible">
+          </div>
+        </div>
+
+    </div>
+
+    
+  
+  </section>
+
+<!-- features  -->
+  <section id="feature">
+    <div class="container mx-auto mt-16 px-6">
+      <h2 class="mb-6 text-4xl font-semibold text-center">Features</h2>
+      <p class="max-w-md mx-auto text-center text-grayishBlue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam necessitatibus optio placeat facilis minima quam ex eos, nisi voluptatum esse?</p>
+    </div>
+  </section>
+
+  <!-- features tab  -->
+   <section id="tabs">
+    
+    <!-- tabs/panels container  -->
+     <div class="container relative mx-auto  my-6 mb-32 border mt-12 px-6">
+      <div class="bg-tabs"></div>
+      
+        <!-- tabs flex container  -->
+         <div class="flex flex-col justify-center max-w-xl mx-auto mb-6 border-b md:space-x-10 md:flex-row">
+           <!-- tab-1  -->
+            <div class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-1">
+              <div class="py-5 border-b-4 border-softRed" data-target="panel-1">Simple Bookmark</div>
+            </div>
+           <!-- tab-2  -->
+           <div class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-2">
+            <div class="py-5 " data-target="panel-2">Speedy Searching</div>
+          </div>
+           <!-- tab-3  -->
+           <div class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-3">
+            <div class="py-5  " data-target="panel-3">Easy Sharing</div>
+          </div>
+         
+      </div>
+     </div>
+
+
+     <!-- tab panel -->
+      <div id="panels" class="container mx-auto">
+        <!-- panel -1  -->
+        <div class="flex flex-col py-5 md:flex-row md:space-x-7 panel panel-1">
+          <!-- panel image  -->
+          <div class="flex justify-center md:w-1/2">
+            <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10">
+          </div>
+          <!-- panel content  -->
+          <div class="flex flex-col space-y-8 md:w-1/2">
+            <h3 class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">Bookmark in one click </h3>
+            <p class="max-w-md text-center text-grayishBlue md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum ipsum veniam animi quibusdam sint totam exercitationem cum distinctio quod.</p>
+            <div class="mx-auto md:mx-0">
+              <a href="" class="px-6 py-3 mt-4 text-sm font-semibold bg-softBlue text-white rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- panel -2  -->
+        <div class="flex  flex-col hidden  py-5 md:flex-row md:space-x-7 panel panel-2">
+          <!-- panel image  -->
+          <div class="flex justify-center md:w-1/2">
+            <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10">
+          </div>
+          <!-- panel content  -->
+          <div class="flex flex-col space-y-8 md:w-1/2">
+            <h3 class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">Bookmark panel-2</h3>
+            <p class="max-w-md text-center text-grayishBlue md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum ipsum veniam animi quibusdam sint totam exercitationem cum distinctio quod.</p>
+            <div class="mx-auto md:mx-0">
+              <a href="" class="px-6 py-3 mt-4 text-sm font-semibold bg-softBlue text-white rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- panel -3  -->
+        <div class="flex  flex-col hidden  py-5 md:flex-row md:space-x-7 panel panel-3">
+          <!-- panel image  -->
+          <div class="flex justify-center md:w-1/2">
+            <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10">
+          </div>
+          <!-- panel content  -->
+          <div class="flex flex-col  space-y-8 md:w-1/2">
+            <h3 class="mt-32 text-3xl font-semibold text-center md:mt-0 md:text-left">Bookmark panel-3</h3>
+            <p class="max-w-md text-center text-grayishBlue md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum ipsum veniam animi quibusdam sint totam exercitationem cum distinctio quod.</p>
+            <div class="mx-auto md:mx-0">
+              <a href="" class="px-6 py-3 mt-4 text-sm font-semibold bg-softBlue text-white rounded shadow-md border-2 border-softBlue md:text-base hover:bg-white hover:text-softBlue">More Info</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    
+
+
+   </section>
+   <!-- ------------------------------------------------------------------------------------------------------------ -->
+<section id="downloads">
+   <div class="text-center mx-auto px-6">
+    <h>Download the extension</h>
+    <p class="text-center max-w-lg mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos harum, ad sint illo odio quo! Nesciunt hic aperiam itaque consequuntur maiores magni, quis sapiente ipsa. Culpa possimus eum amet!</p>
+    <!-- max-w-lg in Tailwind CSS sets the maximum width of an element to a predefined value, typically lg is 32rem (512 pixels) -->
+  </div>
+  </div>
+</section>
+  <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+   <div class="flex flex-col justify-between md:flex-row max-w-5xl mx-auto space-y-10 	">
+ <div class=" md:w-1/3 py-6 space-y-4 border rounded-lg shadow-lg">
+  <div class="flex justify-center">
+    <img src="./images/logo-chrome.svg">
+  </div>
+    <div class="text-center">
+    <h>Add to Chrome</h>
+    <p>Minimum Version 62 </p>
+    </div>
+    <div class="px-6 pt-6  ">
+      <a href="#" class=" flex justify-center border bg-blue-500 text-white hover:bg-white py-3 hover:text-blue-500 hover: border border-blue-500">Add and Install Extension</a>
+    </div>
+ </div>
+ <div class=" md:w-1/3 py-6 space-y-4 border rounded-lg shadow-lg text-center md:mt-12">
+  <div class="flex justify-center">
+    <img src="./images/logo-firefox.svg">
+  </div>
+    <div class="text-center">
+    <h>Add to firefox</h>
+    <p>Minimum Version 62 </p>
+    </div>
+    <div class="px-6 pt-6 ">
+      <a href="#" class=" flex justify-center bg-blue-500 text-white hover:bg-white py-3 hover:text-blue-500 hover: border border-blue-500">Add and Install Extension</a>
+    </div>
+ </div>
+ <div class=" md:w-1/3 py-6 space-y-4 border rounded-lg shadow-lg md:mt-16">
+  <div class="flex justify-center">
+    <img src="./images/logo-opera.svg">
+  </div>
+    <div class="text-center">
+    <h>Add to Opera</h>
+    <p>Minimum Version 62 </p>
+    </div>
+    <div class="px-6 pt-6 ">
+      <a href="# " class =" flex justify-center  bg-blue-500 text-white py-3  hover:bg-white hover:text-blue-500 hover: border border-blue-500">Add and Install Extension</a>
+    </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div class="text-center mx-auto mt-12 px-6">
+    <h>Frequently Asked Questions</h>
+    <p class="text-center max-w-lg mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos harum, ad sint illo odio quo! Nesciunt hic aperiam itaque consequuntur maiores magni, quis sapiente ipsa. Culpa possimus eum amet!</p>
+    <!-- max-w-lg in Tailwind CSS sets the maximum width of an element to a predefined value, typically lg is 32rem (512 pixels) -->
+  </div>
+<!-- --------------------------FAQ'S TABS--------------------------------------- -->
+<section id="faq">
+<div class="border border-black">
+  <!--  main container -->
+  <div class="py-1 border-b outline-none group mx-auto max-w-2xl" tabindex="1">
+    tabindex allows developers to make html elements  activate focusable and also to use differenitate 
+
+    <!-- tab1 flex container  -->
+     <div class="flex items-center justify-between border-b py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
+      <!-- tab title  -->
+       <div class="transition duration-500 ease group-hover:text-red-500">
+        what is Bookmark
+       </div>
+       <!-- arrow  -->
+        <div class="transition duration-500 ease group-focus:-rotate-180 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+        </div>
+     </div>
+      <!-- tab inner content   -->
+   <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0">
+    <p class="py-2 text-justify text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, id eaque? Modi dolores aliquid mollitia accusantium qui voluptates, sint voluptatem adipisci quaerat laudantium veniam autem neque necessitatibus maxime! Cupiditate fugiat accusamus aspernatur, aliquid vitae blanditiis, nobis beatae reiciendis ex nemo ratione earum doloremque reprehenderit veniam voluptatibus doloribus corporis aperiam molestiae!</p>
+   </div> 
+  </div>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+<div class="py-1 border-b outline-none group mx-auto max-w-2xl" tabindex="2">
+
+  <!-- tab2 flex container  -->
+<div class="flex items-center justify-between border-b py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
+<!-- tab title  -->
+ <div class="transition duration-500 ease group-hover:text-red-500">
+ Who Can I Request A New Browser 
+ </div>
+ <!-- arrow  -->
+  <div class="transition duration-500 ease group-focus:-rotate-180 ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+  </div>
+</div>
+<!-- tab inner content   -->
+<div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0">
+<p class="py-2 text-justify text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, id eaque? Modi dolores aliquid mollitia accusantium qui voluptates, sint voluptatem adipisci quaerat laudantium veniam autem neque necessitatibus maxime! Cupiditate fugiat accusamus aspernatur, aliquid vitae blanditiis, nobis beatae reiciendis ex nemo ratione earum doloremque reprehenderit veniam voluptatibus doloribus corporis aperiam molestiae!</p>
+</div> 
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div class="py-1 border-b outline-none group mx-auto max-w-2xl" tabindex="3">
+
+  <!-- tab2 flex container  -->
+<div class="flex items-center justify-between border-b py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
+<!-- tab title  -->
+ <div class="transition duration-500 ease group-hover:text-red-500">
+  Is there a mobile App </div>
+ <!-- arrow  -->
+  <div class="transition duration-500 ease group-focus:-rotate-180 ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+  </div>
+</div>
+<!-- tab inner content   -->
+<div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0">
+<p class="py-2 text-justify text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, id eaque? Modi dolores aliquid mollitia accusantium qui voluptates, sint voluptatem adipisci quaerat laudantium veniam autem neque necessitatibus maxime! Cupiditate fugiat accusamus aspernatur, aliquid vitae blanditiis, nobis beatae reiciendis ex nemo ratione earum doloremque reprehenderit veniam voluptatibus doloribus corporis aperiam molestiae!</p>
+</div> 
+</div>
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+<div class="py-1 border-b outline-none group mx-auto max-w-2xl" tabindex="4">
+
+  <!-- tab2 flex container  -->
+<div class="flex items-center justify-between border-b py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
+<!-- tab title  -->
+ <div class="transition duration-500 ease group-hover:text-red-500">
+ What about other chromium browser</div>
+ <!-- arrow  -->
+  <div class="transition duration-500 ease group-focus:-rotate-180 ">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+  </div>
+</div>
+<!-- tab inner content   -->
+<!-- focus refers to the state when an interactive element (like a button, link, or input) is actively selected this container then this p tag content will display when we select other element in page it will automatically unselected   -->
+
+<div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0">
+<p class="py-2 text-justify text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, id eaque? Modi dolores aliquid mollitia accusantium qui voluptates, sint voluptatem adipisci quaerat laudantium veniam autem neque necessitatibus maxime! Cupiditate fugiat accusamus aspernatur, aliquid vitae blanditiis, nobis beatae reiciendis ex nemo ratione earum doloremque reprehenderit veniam voluptatibus doloribus corporis aperiam molestiae!</p>
+<!-- text-justify is used to aviod uneven in text text-justify: Aligns text to both the left and right edges by adding space between words, making the text justified. -->
+</div> 
+</div>
+</div>
+</section>
+<!-- ----------------------------------------------------------------------------- -->
+<div class="mx-auto max-w-2xl">
+  <div class="bg-softBlue">
+    <h1 class="text-center">35000+ already joined</h1>
+    <p class="text-black text-center">stay up to date whate we're doong</p>
+    <div class="flex flex-col">
+    <input  class="mb-6 text-center mx-auto border"     type="email" placeholder="enter your email" />
+    <button class="bg-softRed mx-auto">Contact Us</button>
+  </div>
+  
+   </div>
+</div>
+<div class="md:mx-auto p-6 border mb-10 bg-blue-900  ">
+  <div class="flex flex-col mx-auto md:flex-row justify-between mt-16 z-30">
+    <img src="./images/logo-bookmark.svg" alt="Logo">
+
+    <div class="flex flex-col items-center md:flex-row justify-between space-x-8 md:w-1/2">
+      <a href="#" class="hover:text-softRed">Features</a>
+      <a href="#" class="hover:text-softRed">Download</a>
+      <a href="#" class="hover:text-softRed">FAQ</a>
+      <a href="#" class="text-white bg-softRed px-3 py-2 shadow-2xl hover:text-softRed hover:bg-white">Login</a>
+      <div class="flex flex-row mx-auto justify-between space-x-8 max-w-sm h-1/2">
+        <div>
+          <img src="./images/icon-facebook.svg">
+        </div>
+        <div>
+          <img src="./images/icon-twitter.svg">
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>
+<script src="./index.js"></script>
